@@ -93,7 +93,6 @@ public class MainActivity extends Activity implements MainView, AdapterView.OnIt
 
     @Override public void setItems(List<Prayer> items) {
         listView.setAdapter(new PrayerListAdapter(this, items));
-        hideProgress();
     }
 
     @Override public void showMessage(String message) {

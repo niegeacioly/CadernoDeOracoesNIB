@@ -38,6 +38,7 @@ public class MainPresenterImpl implements MainPresenter {
         }
 
         mainView.setItems(createListPrayer());
+        mainView.hideProgress();
     }
 
     @Override
@@ -57,7 +58,7 @@ public class MainPresenterImpl implements MainPresenter {
         prayers.add(new Prayer("Topic 1", "Trabalho", "Novo emprego, salario legal, pessoas para evangelizar", null, "02-24-2016", false ));
         prayers.add(new Prayer("Topic 1", "Ministério", "Liderança, crianças, evangelismo", null, "02-24-2016", false ));
         prayers.add(new Prayer("Topic 1", "Casamento", "Marido e relacionamento", null, "02-24-2016", false ));
-        prayers.add(new Prayer("Topic 1", "Diego", "Liderança/pastorado, emprego, Nova Kids, Concursos, mais discipulos", null, "02-24-2016", false ));
+        prayers.add(new Prayer("Topic 1", "Diego", "Liderança/pastor da casa, emprego, Nova Kids, Concursos, mais discipulos", null, "02-24-2016", false ));
         return prayers;
     }
 }
