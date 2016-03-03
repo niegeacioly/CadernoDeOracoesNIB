@@ -8,10 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.antonioleiva.mvpexample.oracoes.R;
-
 import java.util.List;
 
+import nib.org.br.oracoes.R;
 import nib.org.br.oracoes.app.model.Prayer;
 
 /**

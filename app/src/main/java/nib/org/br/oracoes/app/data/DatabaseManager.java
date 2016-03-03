@@ -10,7 +10,7 @@ import nib.org.br.oracoes.app.model.Prayer;
 /**
  * Created by Niege Costa Fonseca on 12/02/2016.
  */
-public class DatabaseManager {
+public class DatabaseManager implements IDatabaseManager{
 
     private static DatabaseManager instance;
 
@@ -34,10 +34,7 @@ public class DatabaseManager {
         return helper;
     }
 
-    /**
-     *
-     * @return
-     */
+    @Override
     public List<Prayer> findAllPrayers() {
         List<Prayer> list = null;
         try {
@@ -46,5 +43,34 @@ public class DatabaseManager {
             e.printStackTrace();
         }
         return list;
+    }
+
+    @Override
+    public Prayer getPrayerById(final Long id){
+        try {
+            Prayer prayer = getHelper().getPrayerDAO().queryForId(id);
+            return prayer;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public void createOrUpdatePrayer(Prayer prayer){
+        try {
+            getHelper().getPrayerDAO().createOrUpdate(prayer);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void deletePrayer(Prayer prayer){
+        try {
+            getHelper().getPrayerDAO().delete(prayer);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

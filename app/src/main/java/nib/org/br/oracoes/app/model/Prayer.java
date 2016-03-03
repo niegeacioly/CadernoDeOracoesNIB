@@ -13,9 +13,6 @@ public class Prayer {
     private Long id;
 
     @DatabaseField
-    private String topic;
-
-    @DatabaseField
     private String title;
 
     @DatabaseField
@@ -32,21 +29,12 @@ public class Prayer {
 
     public Prayer(){}
 
-    public Prayer(String topic, String title, String description, String answer, String dateTime, boolean isPrayed){
-        this.setTopic(topic);
+    public Prayer(String title, String description, String answer, String dateTime, boolean isPrayed){
         this.setAnswer(answer);
         this.setDescription(description);
         this.setTitle(title);
         this.setDateTime(dateTime);
         this.setIsPrayed(isPrayed);
-    }
-
-    public String getTopic() {
-        return topic;
-    }
-
-    public void setTopic(String topic) {
-        this.topic = topic;
     }
 
     public String getTitle() {

@@ -18,9 +18,11 @@
 
 package nib.org.br.oracoes.app.presenter;
 
-public interface MainPresenter {
+public interface PrayerFragmentPresenter {
 
     void onResume();
+
+    void onItemClicked(int position);
 
     void onDestroy();
 }
